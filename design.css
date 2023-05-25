@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&family=Roboto+Mono:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@200;600&family=Roboto+Mono:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kalam:wght@700&family=Poppins:wght@200;600&family=Roboto+Mono:wght@400;600&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', 'Roboto Mono', 'Poppins';
+    font-size: 25px;
+    font-weight: 200;
+    color: whitesmoke;
+    border: 1px solid black;
+    color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(255, 255, 249);
+    /* height: 150vh; */
+}
+
+header {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(5px);
+}
+
+header,
+#herosection {
+    width: 95vw;
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#herosection {
+    height: 80vh;
+
+}
+
+navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contactbutton {
+    background: linear-gradient(to right, rgb(33, 150, 243), rgb(1, 229, 194));
+    padding: 8px 30px 8px 30px;
+    border-radius: 5px;
+    box-shadow: grey 0px 2px 5px;
+}
+
+section {
+    margin-top: 20px;
+    width: 95vw;
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.whycontainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+}
+
+.whyinfo:nth-child() {
+    margin: 10px;
+}
+
+.whyusbutton {
+    display: flex;
+    padding: 8px 30px;
+    background: rgb(1, 229, 194);
+    width: 200px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.brown {
+    color: brown;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Kalam';
+    font-weight: bolder;
+}
+
+.h1green {
+    font-size: 50px;
+    color: rgb(1, 229, 194);
+    font-family: 'Kalam';
+}
+
+.h1blue {
+    font-size: 50px;
+    color: rgb(33, 150, 243);
+    font-family: 'Kalam';
+}

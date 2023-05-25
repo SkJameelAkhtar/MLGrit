@@ -28,6 +28,10 @@ a {
     text-decoration: none;
 }
 
+img {
+    object-fit: cover;
+}
+
 header {
     position: sticky;
     top: 0;
@@ -60,7 +64,16 @@ nav {
     padding: 2px 40px 2px 40px;
     border-radius: 5px;
     box-shadow: grey 0px 2px 5px;
+    transition: 0.2s;
     cursor: pointer;
+}
+
+.contactbutton:hover {
+    transform: scale(1.1)
+}
+
+.contactbutton:active {
+    transform: scale(0.9)
 }
 
 section {
@@ -69,6 +82,8 @@ section {
     margin-top: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
+    display: grid;
+    place-items: center;
 }
 
 .whycontainer {
@@ -94,6 +109,15 @@ section {
     align-items: center;
     transition: 0.2s;
     color: white;
+    cursor: pointer;
+}
+
+.whyusbutton:hover {
+    transform: scale(1.1)
+}
+
+.whyusbutton:active {
+    transform: scale(0.9)
 }
 
 .brown {
@@ -156,7 +180,16 @@ h1 {
     align-items: center;
     transition: 0.2s;
     margin: 40px auto 20px auto;
+    cursor: pointer;
     /* color:white; */
+}
+
+.viewservices:hover {
+    transform: scale(1.1);
+}
+
+.viewservices:active {
+    transform: scale(0.9);
 }
 
 #toolsbox {
@@ -253,6 +286,11 @@ h2 {
     border: 1px solid black;
     border-radius: 50%;
     clear: both;
+    transition: 0.2s;
+}
+
+.testimonial:hover {
+    transform: scale(1.02) translateY(-5px);
 }
 
 .testimonial:not(:first-child) {
@@ -283,7 +321,8 @@ h2 {
     justify-content: center;
 }
 
-.consultdetails h1 {
+.consultdetails h1,
+.newslettercontainer h1 {
     color: white;
 }
 
@@ -293,7 +332,7 @@ h2 {
 
 .field i {
     font-size: 20px;
-    color:rgb(185, 185, 185);
+    color: rgb(185, 185, 185);
 }
 
 .field .inputdesc {
@@ -301,10 +340,10 @@ h2 {
     left: 8px;
     top: 15px;
     font-size: 20px;
-    color:rgb(185, 185, 185);
-    padding-left:10px;
-    transition:0.2s;
-    height:1px;
+    color: rgb(185, 185, 185);
+    padding-left: 10px;
+    transition: 0.2s;
+    height: 1px;
 }
 
 #contactform {
@@ -318,15 +357,15 @@ h2 {
     height: 60px;
     transform: skew(3deg);
     border: 2px solid rgb(217, 217, 217);
-    padding-left:20px;
+    padding-left: 20px;
 }
 
 .field input:valid~span,
 .field input:focus~span {
-  color: #ffffff;
-  transform: translateX(0px) translateY(-45px);
-  border-left: 1px solid #03bcf4;
-  border-right: 1px solid #03bcf4;
+    color: #ffffff;
+    transform: translateX(0px) translateY(-45px);
+    border-left: 1px solid #03bcf4;
+    border-right: 1px solid #03bcf4;
 }
 
 .submit #submit {
@@ -342,4 +381,80 @@ h2 {
     letter-spacing: 3px;
     transform: skew(-1deg);
     cursor: pointer;
-  }
+}
+
+.blogcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin: auto;
+    gap: 10px;
+}
+
+.blog {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-family: 'Poppins';
+    transition: 0.2s;
+}
+
+.blog:nth-child(2n+1) {
+    flex-direction: row-reverse;
+}
+
+.blog img {
+    border-radius: 10px;
+}
+
+.blog:hover {
+    transform: scale(1.1);
+}
+
+#newslettersection {
+    background: rgb(33, 150, 243);
+}
+
+.newslettercontainer,
+#newslettersection .submit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto 70px;
+}
+
+.newslettercontainer p {
+    margin: 30px auto 60px auto;
+}
+
+#newslettersection .submit {
+    margin: 60px auto 10px auto;
+}
+
+footer {
+    background: rgb(66, 66, 66);
+    padding: 50px;
+    width: 95vw;
+    margin: 30px auto 0px auto;
+}
+
+.footercontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footercontainer .aboutus{
+    max-width: 600px;
+}
+
+.socialandcontact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.footercontainer .socialandcontact{
+    max-width: 500px;
+}

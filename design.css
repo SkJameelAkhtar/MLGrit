@@ -133,7 +133,7 @@ section {
     display: flex;
     padding: 8px 30px;
     background: rgb(254, 252, 250);
-    width: 350px;
+    width: 280px;
     height: 50px;
     font-size: 25px;
     border-radius: 5px;
@@ -244,6 +244,67 @@ h1 {
     /* color:white; */
 }
 
+#skillsection {
+    /* border: 3px solid rgb(0, 176, 149); */
+    /* border-radius: 10px; */
+    background: url('skillbackgroundtexture.avif');
+    box-shadow: inset 0px 0px 50px 50px rgb(254, 252, 250);
+}
+
+.skillcontainer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 350px));
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap:10px;
+    padding: 20px 50px 20px 50px;
+}
+
+.skill:nth-child(2n) {
+    background: #03bcf4;
+}
+
+.skill:nth-child(4n) {
+    background: rgb(1, 229, 194);
+    transform:skew(1deg);
+}
+
+.skill:nth-child(6n) {
+    background: rgb(1, 229, 194);
+    transform:skew(1deg);
+
+}
+
+.skill:nth-child(2n+4) {
+    margin-top: -180px;
+}
+.skilldetail{
+    font-size: 20px;
+}
+h3{
+    font-family: 'Kalam';
+    color:white;
+}
+.readmore{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 25px;
+    width: 220px;
+    height: 45px;
+    background: #ffffffef;
+    letter-spacing: 3px;
+    transform: skew(-2deg);
+    cursor: pointer;
+    margin-top: 20px;
+}
 #toolsbox {
     display: grid;
     place-items: center;

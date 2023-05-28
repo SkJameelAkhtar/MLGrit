@@ -14,6 +14,9 @@
 }
 
 .darkmode {
+    --primary-color1: rgb(28, 110, 178);
+    --primary-color2: rgb(5, 151, 129);
+    --secondary-color: rgb(66, 66, 66);
     --theme-color: rgb(16, 17, 17);
     --theme-text-color: rgb(254, 252, 250);
     --theme-opposite-text-color: black;
@@ -39,6 +42,7 @@ body {
     /* background-color: rgb(255, 255, 249); */
     background-color: var(--theme-color);
     position: relative;
+    transition: 1s;
 }
 
 a {
@@ -107,11 +111,13 @@ nav {
 .contactbutton:active {
     transform: scale(0.9)
 }
-.consultandthemecontainer{
-    display:flex;
+
+.consultandthemecontainer {
+    display: flex;
     flex-direction: row;
-    gap:30px;
+    gap: 30px;
 }
+
 .backtotop {
     float: right;
     position: sticky;
@@ -151,7 +157,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin: 80px auto 80px auto;
+    margin: 80px auto;
 }
 
 .splashtext h1 {
@@ -168,7 +174,7 @@ section {
     display: flex;
     padding: 8px 30px;
     background: var(--theme-color);
-    width: 280px;
+    width: 290px;
     height: 50px;
     font-size: 25px;
     /* border-radius: 5px; */
@@ -182,7 +188,7 @@ section {
 
 .makeappointmentbutton::before {
     content: "";
-    width: 279px;
+    width: 292px;
     height: 49px;
     background: transparent;
     border: 1px solid var(--theme-opposite-text-color);
@@ -237,9 +243,11 @@ section {
 .viewservices:active {
     transform: scale(0.98)
 }
-.changetextcolor{
-    color:var(--theme-text-color)
+
+.changetextcolor {
+    color: var(--theme-text-color)
 }
+
 .white {
     color: white;
 }
@@ -248,7 +256,7 @@ h1 {
     font-size: 50px;
     font-family: 'Kalam';
     font-weight: bolder;
-    color:var(--theme-text-color)
+    color: var(--theme-text-color)
 }
 
 .h1green {
@@ -309,10 +317,10 @@ h1 {
     transform: rotateZ(1deg);
 }
 
-#skillsection {
+/* #skillsection {
     background: url('skillbackgroundtexture.avif');
     box-shadow: inset 0px 0px 25px 75px var(--theme-color);
-}
+} */
 
 .skillcontainer {
     display: grid;
@@ -327,25 +335,31 @@ h1 {
     padding: 20px;
     gap: 10px;
     padding: 20px 50px 20px 50px;
+    transition: 0.2s;
 }
 
 .skill:nth-child(2n) {
-    background: #03bcf4;
+    background: var(--primary-color1);
 }
 
 .skill:nth-child(4n) {
-    background: rgb(1, 229, 194);
+    background: var(--primary-color2);
     transform: skew(1deg);
+    margin-right: -30px;
 }
 
 .skill:nth-child(6n) {
-    background: rgb(1, 229, 194);
+    background: var(--primary-color2);
     transform: skew(1deg);
-
+    margin-left: -30px;
 }
 
 .skill:nth-child(2n+4) {
-    margin-top: -180px;
+    margin-top: -240px;
+}
+
+.skill:hover {
+    transform: scale(1.05)
 }
 
 .skilldetail {
@@ -365,7 +379,8 @@ h3 {
     padding: 5px 25px;
     width: 220px;
     height: 45px;
-    background: #ffffffef;
+    background: var(--theme-color);
+    color:var(--theme-text-color);
     letter-spacing: 3px;
     transform: skew(-2deg);
     cursor: pointer;
@@ -377,7 +392,7 @@ h3 {
     width: 219px;
     height: 44px;
     background: transparent;
-    border: 1px solid white;
+    border: 1px solid var(--theme-color);
     position: absolute;
     transform: rotateZ(1deg);
     /* transform:skew(3deg) */
@@ -389,48 +404,63 @@ h3 {
 }
 
 .toolscontainer {
-    width: 80vw;
-    height: 400px;
+    width: 70vw;
+    /* padding: 10px; */
+}
+
+.toolswrapper {
+    position: relative;
+    margin: 0 auto;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
     display: flex;
     flex-direction: row;
-    gap: 40px;
-    overflow-x: scroll;
-    padding: 10px;
 }
 
 .tool {
-    position: relative;
-    min-width: 350px;
-    padding-right: 5px;
-}
-
-.tooldetail {
-    border: 3px solid black;
-    border-radius: 5px;
-    box-shadow: rgb(16, 14, 14) 5px 5px;
-    border-radius: 5px;
-    margin-top: 30px;
-}
-
-.toolicon {
-    position: absolute;
-    top: 0px;
-    left: 40px;
-    height: 70px;
-    width: 70px;
+    min-width: 70vw;
+    min-height: 600px;
+    padding: 50px;
     display: flex;
-    /* text-align: center; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    scroll-snap-align: start;
+}
+
+.toollogowrapper {
+    position: relative;
+    width: 300px;
+    height:300px;
+}
+
+.toollogo {
+    width: 300px;
+    height: 300px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(0, 176, 149);
-    border: 3px solid black;
-    border-radius: 5px;
-    box-shadow: rgb(96, 26, 26) 5px 5px;
+    /* position: absolute; */
+    /* box-shadow: 0px 30px; */
 }
 
-.detailcontainer {
-    padding-top: 50px;
-    padding-left: 30px;
+.toollogoshadow{
+    position:absolute;
+    width:250px;
+    height:20px;
+    border-radius: 50%;
+    bottom:-80px;
+    left:25px;
+    background:rgba(16, 17, 17, 0.329);
+    filter: blur(10px);
+}
+.tooldetail {
+    maX-width: 50%;
+}
+
+.tooldetailtext {
+    color: var(--theme-text-color);
 }
 
 h2 {
@@ -438,23 +468,8 @@ h2 {
     font-weight: bolder;
 }
 
-.tooldetailtext {
-    font-size: 20px;
-    margin-top: 20px;
-    overflow-x: hidden;
-    overflow-wrap: break-word;
-}
-
-.tooldetail .contact {
-    padding-top: 20px;
-    padding-left: 30px;
-    padding-bottom: 20px;
-    margin-top: 20px;
-    background: rgba(255, 197, 197, 0.647);
-}
-
 #testimonial {
-    background: rgb(1, 229, 194);
+    background: var(--primary-color2);
     display: grid;
     place-items: center;
 }
@@ -479,10 +494,11 @@ h2 {
 }
 
 .testimonial img {
-    height: 90px;
-    width: 90px;
+    height: 120px;
+    width: 120px;
     object-fit: cover;
-    border-radius: 50px;
+    border-radius: 50%;
+    transition: 0.2s;
 }
 
 .testimonial:hover {
@@ -502,8 +518,10 @@ h2 {
 }
 
 .activeuser {
-    border: 4px solid blueviolet;
-    border-radius: 50px;
+    border: 5px solid rgb(122, 122, 255);
+    transform: scale(1.1);
+    transform: translateY(-15px);
+    border-radius: 50%;
 }
 
 .usertestimonial {
@@ -518,7 +536,7 @@ h2 {
 }
 
 #consultformsection {
-    background: rgb(33, 150, 243);
+    background: var(--primary-color1);
 }
 
 .consultcontainer {
@@ -646,11 +664,13 @@ h2 {
 .blog:active {
     transform: scale(0.99);
 }
-.blogtitle{
-    color:var(--theme-text-color);
+
+.blogtitle {
+    color: var(--theme-text-color);
 }
+
 #newslettersection {
-    background: rgb(33, 150, 243);
+    background: var(--primary-color1);
 }
 
 .newslettercontainer,

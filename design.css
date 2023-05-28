@@ -4,6 +4,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kalam:wght@700&family=Poppins:wght@200;600&family=Roboto+Mono:wght@400;600&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Indie+Flower&family=Kalam:wght@700&family=Poppins:wght@200;600&family=Roboto+Mono:wght@400;600&display=swap');
 
+:root {
+    --primary-color1: rgb(33, 150, 243);
+    --primary-color2: rgb(1, 229, 194);
+    --secondary-color: rgb(66, 66, 66);
+    --theme-color: rgb(254, 252, 250);
+    --theme-text-color: black;
+    --theme-opposite-text-color: rgb(254, 252, 250);
+}
+
+.darkmode {
+    --theme-color: rgb(16, 17, 17);
+    --theme-text-color: rgb(254, 252, 250);
+    --theme-opposite-text-color: black;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -11,7 +26,7 @@
     font-family: 'Indie Flower', 'Roboto Mono', 'Poppins';
     font-size: 25px;
     font-weight: 200;
-    color: whitesmoke;
+    color: white;
     /* border: 1px solid black; */
     color: black;
 }
@@ -22,7 +37,7 @@ html {
 
 body {
     /* background-color: rgb(255, 255, 249); */
-    background-color: rgb(254, 252, 250);
+    background-color: var(--theme-color);
     position: relative;
 }
 
@@ -60,6 +75,19 @@ nav {
     margin: auto;
 }
 
+.themetoggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height:40px;
+    width:100px; */
+    color: purple;
+    border: 1px solid navajowhite;
+    border-radius: 20px;
+    padding: 2px 20px;
+    background: var(--theme-color);
+}
+
 .contactbutton {
     background: linear-gradient(to right, rgb(33, 150, 243), rgb(37, 192, 194));
     padding: 2px 40px 2px 40px;
@@ -79,7 +107,11 @@ nav {
 .contactbutton:active {
     transform: scale(0.9)
 }
-
+.consultandthemecontainer{
+    display:flex;
+    flex-direction: row;
+    gap:30px;
+}
 .backtotop {
     float: right;
     position: sticky;
@@ -105,7 +137,7 @@ section {
 
 #herosection {
     height: 80vh;
-    background: rgb(1, 229, 194);
+    background: var(--primary-color2);
     border-radius: 10px;
 }
 
@@ -135,7 +167,7 @@ section {
 .makeappointmentbutton {
     display: flex;
     padding: 8px 30px;
-    background: rgb(254, 252, 250);
+    background: var(--theme-color);
     width: 280px;
     height: 50px;
     font-size: 25px;
@@ -143,9 +175,9 @@ section {
     justify-content: center;
     align-items: center;
     transition: 0.2s;
-    color: black;
+    color: var(--theme-text-color);
     cursor: pointer;
-    border: 1px solid rgb(1, 229, 194);
+    border: 1px solid var(--theme-color);
 }
 
 .makeappointmentbutton::before {
@@ -153,7 +185,7 @@ section {
     width: 279px;
     height: 49px;
     background: transparent;
-    border: 1px solid white;
+    border: 1px solid var(--theme-opposite-text-color);
     position: absolute;
     transform: rotateZ(0.5deg);
     transform: skew(3deg)
@@ -162,7 +194,7 @@ section {
 .whycontainer {
     display: grid;
     grid-template-columns: 1fr 2fr;
-
+    gap: 40px;
 }
 
 .w {
@@ -172,26 +204,23 @@ section {
 .whyusbutton {
     display: flex;
     padding: 8px 30px;
-    background: rgb(1, 229, 194);
+    background: var(--primary-color2);
     width: 250px;
     height: 50px;
     font-size: 30px;
-    /* border-radius: 5px; */
     justify-content: center;
     align-items: center;
     transition: 0.2s;
-    color: white;
+    color: var(--theme-text-color);
     cursor: pointer;
-    border: 1px solid white;
-
 }
 
 .whyusbutton::after {
     content: "";
-    width: 249px;
-    height: 49px;
+    width: 250px;
+    height: 50px;
     background: transparent;
-    border: 1px solid rgb(1, 229, 194);
+    border: 1px solid var(--primary-color2);
     position: absolute;
     transform: rotateZ(0.5deg);
     transform: skew(3deg)
@@ -208,11 +237,9 @@ section {
 .viewservices:active {
     transform: scale(0.98)
 }
-
-.brown {
-    color: brown;
+.changetextcolor{
+    color:var(--theme-text-color)
 }
-
 .white {
     color: white;
 }
@@ -221,17 +248,18 @@ h1 {
     font-size: 50px;
     font-family: 'Kalam';
     font-weight: bolder;
+    color:var(--theme-text-color)
 }
 
 .h1green {
     font-size: 50px;
-    color: rgb(1, 229, 194);
+    color: var(--primary-color2);
     font-family: 'Kalam';
 }
 
 .h1blue {
     font-size: 50px;
-    color: rgb(33, 150, 243);
+    color: var(--primary-color1);
     font-family: 'Kalam';
 }
 
@@ -250,7 +278,7 @@ h1 {
 }
 
 #whatsection {
-    background-color: rgb(33, 150, 243);
+    background-color: var(--primary-color1);
     padding: 30px;
     transform: skew(2deg);
     margin-top: 50px;
@@ -259,18 +287,16 @@ h1 {
 .viewservices {
     display: flex;
     padding: 8px 30px;
-    background: rgb(249, 255, 254);
+    background: var(--theme-opposite-text-color);
     width: 300px;
     height: 50px;
     font-size: 30px;
-    /* border-radius: 5px; */
     justify-content: center;
     align-items: center;
     transition: 0.2s;
     margin: 40px auto 20px auto;
     cursor: pointer;
-    border: 1px solid rgb(33, 150, 243);
-    /* color:white; */
+    color: var(--theme-text-color);
 }
 
 .viewservices::after {
@@ -278,15 +304,14 @@ h1 {
     width: 295px;
     height: 49px;
     background: transparent;
-    border: 1px solid white;
+    border: 1px solid var(--theme-opposite-text-color);
     position: absolute;
     transform: rotateZ(1deg);
-    /* transform:skew(3deg) */
 }
 
 #skillsection {
     background: url('skillbackgroundtexture.avif');
-    box-shadow: inset 0px 0px 50px 50px rgb(254, 252, 250);
+    box-shadow: inset 0px 0px 25px 75px var(--theme-color);
 }
 
 .skillcontainer {
@@ -441,14 +466,11 @@ h2 {
     align-items: center;
     justify-content: center;
     margin-top: 40px;
-
     height: 100px;
     width: 900px;
 }
 
 .testimonial {
-    /* width: 90px;
-    height: 90px; */
     background: transparent;
     transition: 0.2s;
     display: flex;
@@ -460,7 +482,6 @@ h2 {
     height: 90px;
     width: 90px;
     object-fit: cover;
-    /* border: 1px solid black; */
     border-radius: 50px;
 }
 
@@ -572,12 +593,13 @@ h2 {
     letter-spacing: 3px;
     transform: skew(-1deg);
     cursor: pointer;
-    transition:0.2s;
+    transition: 0.2s;
 }
 
 #submit:hover {
     transform: scale(1.02);
 }
+
 #submit:active {
     transform: scale(0.98);
 }
@@ -624,7 +646,9 @@ h2 {
 .blog:active {
     transform: scale(0.99);
 }
-
+.blogtitle{
+    color:var(--theme-text-color);
+}
 #newslettersection {
     background: rgb(33, 150, 243);
 }

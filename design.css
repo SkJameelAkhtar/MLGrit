@@ -30,7 +30,7 @@
     font-size: 25px;
     font-weight: 200;
     color: white;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     color: black;
 }
 
@@ -47,12 +47,6 @@ body {
 
 a {
     text-decoration: none;
-}
-
-img~.testimonial {
-    object-fit: contain;
-    height: auto;
-    width: auto;
 }
 
 header {
@@ -864,6 +858,12 @@ footer {
 }
 
 @media screen and (min-width:901px) {
+    .splashgraphic {
+        width: 400px;
+        height: 400px;
+        object-fit: contain;
+    }
+
     .blog:nth-child(2n) {
         margin-right: -80px;
     }

@@ -1,5 +1,6 @@
 
 let userPics = document.getElementsByClassName('userpic');
+let userTexts = document.getElementsByClassName('testimonialdetail');
 
 function changeTheme() {
     document.body.classList.toggle("darkmode");
@@ -17,8 +18,12 @@ function showReview() {
     for (userPic of userPics) {
         userPic.classList.remove('activeuser');
     }
+    for (userText of userTexts) {
+        userText.classList.remove('activeusertext');
+    }
 
     let i = Array.from(userPics).indexOf(event.target);
     userPics[i].classList.toggle('activeuser');
+    userTexts[i].classList.toggle('activeusertext');
     // x.innerHTML = usertestimoniallist[i];
 }

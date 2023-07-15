@@ -144,7 +144,7 @@ section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .splashdetails {
@@ -610,6 +610,9 @@ h2 {
     transition: 0.2s;
     height: 1px;
 }
+.inputdesc{
+    pointer-events:none
+}
 
 #contactform {
     display: flex;
@@ -747,7 +750,7 @@ footer {
 }
 
 .flowcircular {
-    font-family: 'Flow Circular';
+    font-family: 'Indie Flower';
 }
 
 .footercontainer .aboutus {
